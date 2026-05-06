@@ -2,126 +2,11 @@
 <html lang="en">
 <head>
 <title>O Catolicismo em sua Mão</title>
+<link rel="stylesheet" href="style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  * {
-    box-sizing: border-box;
-    }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    }
-  
-  /* Style the header */
-  header 
-    {
-    background-color: rgb(233, 211, 168);
-    padding: 30px;
-    text-align: center;
-    font-size: 32px;
-    font-family: 'Times New Roman', Times, serif, Times, serif;;
-    }
-  
-  /* Create two columns/boxes that floats next to each other */
-  nav 
-    {
-    float: left;
-    width: 25%;
-    background: #aaa399;
-    padding: 20px;
-    height: 660px;
-    }
-  
-  /* Style the list inside the menu */
-  nav ul 
-    {
-    list-style-type: none;
-    padding: 0;
-    }
-  /* O container precisa ter posição relativa para a lista se alinhar a ele */
-  .container-hover {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-  }
-  
-  /* Esconde a lista por padrão */
-  .lista-suspensa {
-    display: none;
-    position: absolute;
-    top: 100%; /* Aparece logo abaixo da palavra */
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 4px;
-    padding: 10px;
-  }
-  
-  /* Mostra a lista quando o mouse passa no container */
-  .container-hover:hover .lista-suspensa {
-    display:block;
-  }
-  
-  /* Estilo simples para a lista */
-  .lista-suspensa ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .lista-suspensa li {
-    padding: 8px;
-    color: black;
-  }
-  
-  .lista-suspensa li:hover {
-    background-color: #ddd;
-  }
-  article {
-    float:left;
-    padding: 20px;
-    width: 75%;
-    height: 660px;
-    background-color: #f1f1f1;
-  }
-  
-  /* NOVO: Estilo para o iframe dentro do article */
-  article iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
-  /* Clear floats after the columns */
-  section::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the footer */
-  footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-  
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
-  }
-  </style>
   </head>
   <body>
-  
   <header>
     <h2>Catolicismo</h2>
   </header>
@@ -161,16 +46,16 @@
             </ul>
           </div>
       </div><br>
-          <i>A remissão dos pecados</i>
-      <div class="container-hover">
-        <i>A Ressurreição para uma nova Vida</i>
+          <i>A remissão dos pecados</i><br>
+        <div class="container-hover">
+          <i>A Ressurreição para uma nova Vida</i>
         <div class="lista-suspensa">
             <ul>
               <li>A Ressurreição com Cristo</li>
               <li>Escatologia</li>
             </ul>
         </div>
-      </div>
+      </div><br>
       <div class="container-hover">
         <h1>Os Mistérios Cristãos</h1>
         <div class="lista-suspensa">
@@ -193,15 +78,32 @@
       </div><br>
     </nav>
     
-    <article>  
-      <iframe name="conteudo-pilar" src="about:blank"></iframe>
-    </article>
+    <article> 
+      <div id="intro-texto" class="intro-texto">
+        <h2 style="font-size:43px;"><i>Que a Graça de Nosso Senhor Jesus Cristo, o Amor do Pai e a Comunhão do Espírito Santos estejam convosco.</i></h2>
+        <p>Você já se perguntou onde encontrar <mark>TODA</mark> a doutrina da Igreja Católica de maneira <b>fácil, rápida e detalhada?</b><mark>Sem mentiras, mitos ou eufemismos</mark>
+        diante da Verdade e do que diz a instituição da Santa Sé? Diante de tantas informações de fontes diferentes neste mundo globalizado, não sabe nem se quer por onde começar a 
+        <b style="font-family: Open-sans;">encontrar todo o Catolicismo em qualquer lugar do mundo?</b> Bem, se este é seu objetivo, você está no lugar certo!</p><br>
+        <p>Seja bem vindo meu irmão ou minha irmã, ao <b></b></p>
+      </div>
+     <iframe name="conteudo-pilar" id="iframe-conteudo" style="display:none;" src="about:blank"></iframe>
+</article>
   
   </section>
-  
+
   <footer>
+    <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
     <p>Footer</p>
   </footer>
-  
+ <script src="js_intro.js"></script>
   </body>
-  </html>
+</html>
+
+<head>
+    <script src="js_intro.js" defer></script>
+</head>
