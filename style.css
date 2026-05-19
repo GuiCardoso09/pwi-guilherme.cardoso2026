@@ -25,7 +25,7 @@
     float: left;
     padding: 20px 0; /* Ajuste opcional: remover paddings laterais se quiser que encostem na borda */
     width: 25%;
-    height: 917px;
+    height: 800px;
     background: #aaa399;
     }
   
@@ -81,16 +81,19 @@
     float:left;
     padding: 20px;
     width: 75%;
-    height: auto;
+    height: 800px;
     background-color: rgba(223, 183, 110, 0.678);
   }
   
   /* NOVO: Estilo para o iframe dentro do article */
-  article iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+ /* Esconde o iframe por padrão no início */
+#iframe-conteudo {
+  display: none;
+  width: 100%;
+  height: 750px; /* Força uma altura visível para o site carregar dentro */
+  border: none;
+  background: white; /* Garante um fundo limpo enquanto carrega */
+}
    
   .intro-texto{
     text-align: center;
