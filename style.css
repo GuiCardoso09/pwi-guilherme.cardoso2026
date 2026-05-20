@@ -121,19 +121,27 @@
     display: table;
     clear: both;
   }
-  .mapa {
-    width: 600px;
-    height: 450px;
-    border: 2px solid black;
-    margin: 20px auto; /* Adicione isso: centraliza o bloco na horizontal */
-    display: block;    /* Apenas para você ver se a caixa aparece */
+/* Estilo da lista de seleção */
+.seletor-mapas {
+    display: block;    /* Faz o select se comportar como um bloco */
+    margin: 20px auto; /* 'auto' nas laterais centraliza o elemento horizontalmente */
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #dbb56d; /* Cor dourada combinando com seu tema */
+    border-radius: 5px;
 }
 
-#seletor-mapas {
-  display: block;
-  margin: 20px auto; /* Centraliza o select */
-  width: 300px;
-  padding: 10px;
+/* Estilo da caixa (container) onde o mapa aparece */
+.mapa {
+    width: 600px;  /* Largura fixa */
+    height: 450px; /* Altura fixa */
+    margin: 0 auto; /* Centraliza a div na horizontal */
+    border: 2px solid #dbb56d;
+    background-color: #f4f4f4; /* Cor de fundo caso a imagem falhe */
+    overflow: hidden; /* Garante que nada saia para fora das bordas arredondadas (se houver) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ESTA LINHA É A QUE FALTA: ela obriga o mapa a encher a div */
 .mapa iframe {
