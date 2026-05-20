@@ -21,3 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Adicione isso ao final do seu arquivo js_intro.js
+document.addEventListener('change', (event) => {
+    if (event.target && event.target.id === 'seletor-mapas') {
+        const mapaFrame = document.getElementById('mapa-frame');
+        if (mapaFrame) {
+            mapaFrame.src = event.target.value;
+        }
+    }
+});

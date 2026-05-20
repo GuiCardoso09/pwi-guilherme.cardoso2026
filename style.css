@@ -38,7 +38,6 @@
   /* O container precisa ter posição relativa para a lista se alinhar a ele */
   .container-hover {
     position: relative;
-    display: inline-block;
     cursor: pointer;
     color: rgb(0, 0, 0);
   }
@@ -62,21 +61,6 @@
     display:block;
   }
   
-  /* Estilo simples para a lista */
-  .lista-suspensa ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .lista-suspensa li {
-    padding: 8px;
-    color: black;
-  }
-  
-  .lista-suspensa li:hover {
-    background-color: #ddd;
-  }
   article {
     float:left;
     padding: 20px;
@@ -137,7 +121,26 @@
     display: table;
     clear: both;
   }
-  
+  .mapa {
+    width: 600px;
+    height: 450px;
+    border: 2px solid black;
+    margin: 20px auto; /* Adicione isso: centraliza o bloco na horizontal */
+    display: block;    /* Apenas para você ver se a caixa aparece */
+}
+
+#seletor-mapas {
+  display: block;
+  margin: 20px auto; /* Centraliza o select */
+  width: 300px;
+  padding: 10px;
+}
+/* ESTA LINHA É A QUE FALTA: ela obriga o mapa a encher a div */
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
   /* Style the footer */
   footer {
     background-color: #777;
