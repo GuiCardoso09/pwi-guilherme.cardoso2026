@@ -22,12 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Adicione isso ao final do seu arquivo js_intro.js
+// Ouve qualquer mudança (change) que aconteça no documento
 document.addEventListener('change', (event) => {
+    
+    // Verifica se a mudança veio especificamente do nosso select de mapas
     if (event.target && event.target.id === 'seletor-mapas') {
-        const mapaFrame = document.getElementById('mapa-frame');
-        if (mapaFrame) {
-            mapaFrame.src = event.target.value;
+        
+        const urlMapa = event.target.value; // Pega o link (value) da opção escolhida
+        const container = document.getElementById('container-dinamico'); // Seleciona a div do mapa
+
+        // Se o usuário escolheu um local válido (diferente de vazio)
+        if (urlMapa !== "" && container) {
+            
+            // Substitui todo o conteúdo interno da div por um novo iframe
+            // Usamos template strings (as crases ``) para montar o HTML do iframe com a URL dinâmica
+            container.innerHTML = `
+                <iframe 
+                    src="${urlMapa}" 
+                    style="width:100%; height:100%; border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>`;
         }
     }
 });
+
