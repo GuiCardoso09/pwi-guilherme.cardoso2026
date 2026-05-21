@@ -122,6 +122,10 @@
     clear: both;
   }
 /* Estilo da lista de seleção */
+.body-mapa {
+  text-align: center;
+}
+
 .seletor-mapas {
     display: block;    /* Faz o select se comportar como um bloco */
     margin: 20px auto; /* 'auto' nas laterais centraliza o elemento horizontalmente */
