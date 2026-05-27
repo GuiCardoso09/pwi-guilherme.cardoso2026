@@ -47,3 +47,10 @@ document.addEventListener('change', (event) => {
     }
 });
 
+function processarForm(event) {
+    // Esta linha impede que a página recarregue e os dados sumam
+    event.preventDefault();
+    
+    // Aqui você pode adicionar o que quiser que aconteça ao clicar em enviar
+    console.log("Dados mantidos na tela!");
+};

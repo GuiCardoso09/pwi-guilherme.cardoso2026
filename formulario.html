@@ -4,21 +4,38 @@
 <title>Formulário</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/form.css">
 </head>
 <!DOCTYPE html>
 <html>
 <body>
-    <form div class="body_form; form; input-form;">
-        <h3>Oração</h3>
-        <input type="text" placeholder="Seu nome">
-        <input type="text" placeholder="Pedido">
-        <button type="submit">Enviar</button>
-    </form>
-    <form>
-        <h3>Doação</h3>
-        <input type="text" placeholder="CPF">
-        <input type="number" placeholder="Valor">
-        <button type="submit">Doar</button>
-    </form>
+    <p>Se você tem algum pedido de oração em mente, conhece alguém
+        que precise de ajuda e gostaria de colaborar com esta pessoa 
+        de alguma forma que esteja ao <mark>seu alcance</mark>, preencha
+        o <b>formulário da esquerda.</b><br>
+        Se você deseja contribuir com este projeto financeiramente 
+        com um valor de <mark>sua preferência</mark>, preencha o 
+    <b>formulário da direita</b></p>
+    
+    <div class="main-container-form">
+        
+            <form id="formOracao" class="form" onsubmit="enviarELimpar(event, 'formOracao')">
+                <h3>Oração</h3>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="text" placeholder="Pedido" required>
+                <button type="submit">Enviar</button>
+            </form>
+    
+            
+            <form id="formDoacao" class="form" onsubmit="enviarELimpar(event, 'formDoacao')">
+                <h3>Doação</h3>
+                <input type="text" placeholder="CPF" required>
+                <input type="number" placeholder="Valor" required>
+                <button type="submit">Doar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js_intro.js"></script>
 </body>
 </html>

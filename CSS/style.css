@@ -1,0 +1,127 @@
+
+*  {
+    box-sizing: border-box;
+    }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+  
+  /* Style the header */
+  header 
+    {
+    background-color: rgb(219, 181, 109);
+    padding: 30px;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif, Times, serif;
+    }
+  .main-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar linha */
+}
+
+  /* Create two columns/boxes that floats next to each other */
+   nav {
+    padding: 15px 20px; /* Ajuste opcional: remover paddings laterais se quiser que encostem na borda */
+    width: 100%;
+    background-color: #c9b394;
+    border-bottom: 2px solid rgb(219, 106, 106);
+    font-size: 25px;
+    text-align: center;
+    }
+  
+  /* Style the list inside the menu */
+  nav ul 
+    {
+    list-style-type: none;
+    padding: 0;
+    }
+  /* O container precisa ter posição relativa para a lista se alinhar a ele */
+  .container-hover {
+    position: relative;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    display: inline-block;  /* Faz os itens ficarem na mesma linha */
+    border: 1px solid gold;
+    padding: 10px 20px; /* Espaçamento interno para a borda não sufocar o texto */
+    margin: 10px; /* Espaçamento entre um botão e outro */
+    border-radius: 5px;/* Opcional: arredondar os cantos */
+}
+.container-hover:hover {
+  background-color: #dbb56d; /* Efeito ao passar o mouse */
+}
+.container-hover h1 {
+  display: inline;
+  font-size: 1.2rem; /* Tamanho ajustado para caber melhor na barra */
+  margin: 0;
+}
+
+/* Garante que os links dentro do nav não tenham sublinhado feio */
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+  /* Esconde a lista por padrão */
+  .lista-suspensa {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo da palavra */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Mostra a lista quando o mouse passa no container */
+  .container-hover:hover .lista-suspensa {
+    display:block;
+  }
+  
+  article {
+    float:left;
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(223, 183, 110, 0.678);
+  }
+  
+  /* NOVO: Estilo para o iframe dentro do article */
+ /* Esconde o iframe por padrão no início */
+#iframe-conteudo {
+  display: none;
+  width: 100%;
+  height: 750px; /* Força uma altura visível para o site carregar dentro */
+  border: none;
+  background: white; /* Garante um fundo limpo enquanto carrega */
+}
+   
+  .intro-texto{
+    text-align: center;
+    font-size: 23.5px;
+  }
+
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* Estilo da lista de seleção */
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+ @media (max-width: 1000px) {
+  nav, article {
+    width: 100%;
+    height: 100%; /* No flexbox, isso automaticamente joga o article para baixo */
+  }
+}

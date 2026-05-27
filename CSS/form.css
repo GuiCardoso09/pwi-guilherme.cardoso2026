@@ -1,0 +1,50 @@
+*  {
+    box-sizing: border-box;
+    text-align: center;
+ }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+/* CONTAINER PAI: Alinha os formulários horizontalmente */
+.main-container-form {
+  display: flex;             /* Ativa o Flexbox (alinhamento inteligente) */
+  flex-direction: row;       /* Coloca os itens em linha (um ao lado do outro) */
+  gap: 325px;                 /* Cria um espaço de 20px entre os formulários */
+  padding: 20px;             /* Margem interna de segurança do container */
+  justify-content: center;
+}
+
+/* CARDS: Estilo individual de cada formulário */
+.form {
+  border: 2px solid rgb(219, 106, 106); /* Borda avermelhada em volta do form */
+  padding: 15px;                         /* Espaço entre a borda e o conteúdo */
+  border-radius: 8px;                    /* Arredonda os cantos da caixa */
+  background-color: white;               /* Cor de fundo interna branca */
+  display: flex;                         /* Ativa flexbox interno */
+  flex-direction: column;                /* Empilha os inputs (um embaixo do outro) */
+  gap: 10px;                             /* Espaço vertical entre os campos */
+}
+
+/* TÍTULOS: Estilização do H3 dentro do form */
+.form h3 {
+  margin-top: 0;                         /* Remove o espaço extra no topo */
+  font-family: 'Times New Roman', serif; /* Define a tipografia clássica */
+}
+
+/* INPUTS: Estilo das caixas de texto */
+input {
+  padding: 8px;                          /* Aumenta a área interna de digitação */
+  border: 1px solid #ccc;                /* Borda cinza clara discreta */
+  border-radius: 4px;                    /* Leve arredondamento nos campos */
+}
+
+/* BOTÕES: Estilo do botão de ação */
+button {
+  cursor: pointer;                       /* Muda o mouse para 'mãozinha' ao passar */
+  background-color: rgb(219, 181, 109);  /* Cor de fundo dourada/pastoral */
+  border: none;                          /* Remove a borda padrão do sistema */
+  padding: 8px;                          /* Espaçamento interno do botão */
+  font-weight: bold;                     /* Deixa o texto em negrito */
+}
