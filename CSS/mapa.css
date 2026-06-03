@@ -4,20 +4,34 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 23.5px;
+    background-color: rgba(233, 183, 110, 0.678);
+    color: #2C2C2C;
     }
+
+    body h1{
+        color: #0B2341;
+        font-family: "Georgia", serif;
+        font-size: 3rem;
+        line-height: 1.3;
+      }
 
     .seletor {
     display: block;    /* Faz o select se comportar como um bloco */
     margin: 20px auto; /* 'auto' nas laterais centraliza o elemento horizontalmente */
-    padding: 10px;
+    padding: 15px;
     width: 300px;
-    border: 1px solid #dbb56d; /* Cor dourada combinando com seu tema */
+    border: 2px solid #dbb56d; /* Cor dourada combinando com seu tema */
     border-radius: 5px;
+    text-align: center;
+    font-size: 16.5px;
+    size: 40px;
     }
 
     .mapa{
         width: 600px;  /* Largura fixa */
-        height: 450px; /* Altura fixa */
+        height: 480px; /* Altura fixa */
         margin: 0 auto; /* Centraliza a div na horizontal */
         border: 2px solid #dbb56d;
         background-color: #f4f4f4; /* Cor de fundo caso a imagem falhe */
@@ -27,6 +41,13 @@
         align-items: center;
     }
 
+    .conjunto-mapa{
+        display: flex;
+        flex-direction: column; /* Alinha os itens em coluna (um embaixo do outro) */
+        align-items: center;    /* Centraliza os dois horizontalmente na tela */
+        gap: 15px;              /* Cria um espaço controlado entre o seletor e o mapa */
+        margin: 20px auto;      /* Centraliza o bloco inteiro na página */
+    }
     .mapa iframe {
         width: 100%;
         height: 100%;

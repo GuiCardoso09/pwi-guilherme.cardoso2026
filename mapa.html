@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapas</title>
     <link rel="stylesheet" href="CSS/mapa.css">
-    <script src="js_intro.js"></script>
+    <script src="JS/js_intro.js"></script>
 </head>
 <body>
 <h1 style="font-size:43px;">Mapas</h1>
@@ -13,7 +13,8 @@
 Basta você procurar um dos principais lugares que aparecerá o mapa logo abaixo.<br>
 <b>OBS:</b> Talvez você não encontre o seu lugar desejado porque este site está</p>
 
-<select id="seletor-mapas" class="seletor-mapas">
+<div class="conjunto-mapa">
+<select id="seletor-mapas" class="seletor">
     <option value="">-- Selecione um lugar sagrado --</option>
     <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593
     8.981036697711!2d12.4520567!3d41.903812900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
@@ -29,14 +30,10 @@ Basta você procurar um dos principais lugares que aparecerá o mapa logo abaixo
     13.1!3m3!1m2!1s0xd189d2c7306814f%3A0x39f1b0b3eb5e16e4!2zU2FudHXDoXJpbyBkZSBGw6F0aW1h!5e0
     !3m2!1spt-BR!2sbr!4v1779316468058!5m2!1spt-BR!2sbr" target="container-dinamico">Fátima</option>
 </select>
-
-
  <div id="container-dinamico" class="mapa"> 
-    <img src="image/capa.mapa.jpg" 
-    alt="Selecione um local" 
-    style="width: 100%; height: 100%; object-fit: cover;">
+    <img src="image/capa.mapa.jpg"alt="Selecione um local"style="width: 100%; height: 100%; object-fit: cover;">
 </iframe>
 </div>
-
+</div>
     
 </body>
