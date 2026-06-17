@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', (ty) => {
     // Seleciona todos os links que apontam para o conteúdo
     const links = document.querySelectorAll('a[target="conteudo-pilar"]');
